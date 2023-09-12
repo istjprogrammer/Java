@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project default="run">
+	<target name="compile">
+		<javac srcdir="./src" destdir="./bin"> </javac>
+	</target>
+
+	<target name="run" depends="compile">
+		<java classname="ThisTest">
+			<classpath>
+				<pathelement path="./bin" />	
+			</classpath>
+		</java>
+	</target>
+</project>
+
+<!-- 
+	javac -d .bin .src/파일명.java 
+	java -cp .bin 파일명
+-->
